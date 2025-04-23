@@ -1,0 +1,86 @@
+{% extends "wms/base.html" %}
+
+{% block content %}
+
+<div class="sidebar">
+    <h2>TwinSystems</h2>
+    <ul>
+        <li class="active">Cadastrar Produto</li>
+        <li>Wallet</li>
+        <li>Trade</li>
+        <li>Statistics</li>
+        <li>Notifications <span class="badge">5</span></li>
+        <li>Exchange</li>
+        <li>Support</li>
+        <li>Account Settings</li>
+        <li>Log Out</li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <div class="header">
+        <h1>Olá, <span class="highlight">Funcionário</span></h1>
+    </div>
+
+    <h2>Cadastrar Produto</h2>
+
+    <div class="form-container">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.hora_entrada.label_tag }}<br>
+                {{ form.hora_entrada }}
+            </div>
+            <div class="form-group">
+                {{ form.data_entrada.label_tag }}<br>
+                {{ form.data_entrada }}
+            </div>
+            <div class="form-group">
+                {{ form.nome.label_tag }}<br>
+                {{ form.nome }}
+            </div>
+            <div class="form-group">
+                {{ form.produto_id.label_tag }}<br>
+                {{ form.produto_id }}
+            </div>
+            <div class="form-group">
+                {{ form.quantidade.label_tag }}<br>
+                {{ form.quantidade }}
+            </div>
+            <div class="form-group">
+                {{ form.empresa.label_tag }}<br>
+                {{ form.empresa }}
+            </div>
+            <button type="submit" class="btn">Cadastrar</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .form-container {
+        margin-top: 30px;
+        background: #f9f9f9;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 500px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+{% endblock content %}

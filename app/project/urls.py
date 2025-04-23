@@ -22,6 +22,8 @@ from django.urls import path, include
 urlpatterns = [
     path('',include('wms.urls')),
     path('admin/', admin.site.urls),
+    path('cadastrar/', views.cadastrar_produto, name='cadastrar_produto'),
+    path('sucesso/', views.produto_sucesso, name='produto_sucesso'),
 ]
 
 if settings.DEBUG:

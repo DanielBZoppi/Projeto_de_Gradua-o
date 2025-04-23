@@ -6,6 +6,7 @@
     <h2>TwinSystems</h2>
     <ul>
         <li class="active">Dashboard</li>
+        <li><a href="{% url 'cadastrar_produto' %}">Cadastrar Produto</a></li>
         <li>Wallet</li>
         <li>Trade</li>
         <li>Statistics</li>
@@ -19,28 +20,26 @@
 
 <div class="main-content">
     <div class="header">
-        <h1>Good Morning, <span class="highlight">Funcionario</span></h1>
+        <h1>Bem-vindo(a), <span class="highlight">Funcionário</span></h1>
     </div>
-    
-    <h2>Main Dashboard</h2>
+
+    <h2>Dashboard Principal</h2>
     <div class="card-container">
         <div class="card green">BND-USD<br> $45,782.02<br> +1,253.08%</div>
         <div class="card red">BTC-USD<br> $35,425.04<br> -1,853.82%</div>
         <div class="card green">ETH-USD<br> $3,542.01<br> +3,415.0%</div>
     </div>
-    
-    <h2>Total Products</h2>
-    <div class="chart-container">[Gráfico Aqui]</div>
-    
-    <h2>Produtos Recentes</h2>
+
+    <h2>Resumo</h2>
+    <div class="chart-container">
+        <p>[Gráfico Aqui]</p>
+    </div>
+
+    <h2>Últimas Ações</h2>
     <div class="recent-products">
-        <p><strong>Kevin McCoy</strong> - New Customer - 20min Ago - $120.00</p>
+        <p><strong>Produto X</strong> cadastrado - 10min atrás</p>
+        <p><strong>Produto Y</strong> removido - 30min atrás</p>
     </div>
 </div>
 
-
-{% endblock content %}
-
-
-
-
+{% endblock %}

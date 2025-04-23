@@ -5,5 +5,7 @@ ap_name = 'wms'
 
 urlpatterns = [
     path('', index, name='index'),
+    path('produtos/', include('seu_app.urls')),
 ]
+
 
